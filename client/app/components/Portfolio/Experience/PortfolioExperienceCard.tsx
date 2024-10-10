@@ -12,7 +12,7 @@ const PortfolioExperienceCard: React.FC<experiencemap> = ({ icon, rank, skill })
             {icon}
             <div>
                 <h3 className='text-black dark:text-teal-600 '>{skill}</h3>
-                <p className='text-black dark:text-teal-600 '>{rank}</p>
+                <p className='text-black dark:text-green-600  '>{rank}</p>
             </div>
         </article>
     )

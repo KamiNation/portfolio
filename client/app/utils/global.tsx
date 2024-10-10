@@ -1,4 +1,4 @@
-import { ImageLoader, ImageProps } from "next/image";
+import { ImageLoader, ImageProps, StaticImageData } from "next/image";
 import { ReactElement } from "react";
 import { BiLogoGithub, BiLogoLinkedin, BiLogoTwitter, BiRotateRight } from "react-icons/bi";
 import { HiMail } from "react-icons/hi";
@@ -149,7 +149,7 @@ export const portfolioExperienceTW: experiencemap[] = [
 
 export interface projectmap {
     id?: number
-    image?: string
+    image:  StaticImageData | string
     project_name?: string
     github?: string
     live_demo?: string
@@ -162,14 +162,22 @@ export const portfolioProjectMap: projectmap[] = [
         project_name: "Expense Tracker",
         github: "https://github.com/KamiNation/ExpenseTrackerTypescript-Tailwind",
         live_demo: "https://expense-tracker-typescript-tailwind.vercel.app/",
-        technology: "html css react typescript tailwind",
+        technology: "html css react typescript tailwind vite",
         image: "/tracker.png"
     },
     {
-        project_name: "Food Page",
-        github: "Link not available",
+        project_name: "Joke API + Swagger_Docs",
+        github: "https://github.com/KamiNation/JokeAPI-UI-SwaggerDocs",
         live_demo: "Link not available",
-        technology: "html css"
+        technology: "html css swagger express node tailwind",
+        image: "/joke+swagger.gif"
+    },
+    {
+        project_name: "Mayport",
+        github: "https://github.com/KamiNation/Mayport",
+        live_demo: "mayportdemo.vercel.app",
+        technology: "html css tailwind react  vite",
+        image: "/mayport.png"
     },
 ]
 

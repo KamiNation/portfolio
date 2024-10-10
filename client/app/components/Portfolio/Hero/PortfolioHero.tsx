@@ -6,11 +6,15 @@ import { BiLogoGithub, BiLogoLinkedin, BiSolidArrowFromTop } from 'react-icons/b
 const PortfolioHero = () => {
 
     const gitClickHandle = () => {
-        location.href = 'https://github.com/KamiNation'
+        window.open("https://github.com/KamiNation", '_blank');
     }
 
     const linkedinClickHandle = () => {
-        location.href = 'https://www.linkedin.com/in/israel-adedamola-606373139/'
+        window.open('https://www.linkedin.com/in/israel-adedamola-606373139/', '_blank');
+    }
+
+    const contactHandle = () => {
+        location.href = '#contact'
     }
 
     const arrowClickHandle = () => {
@@ -18,6 +22,40 @@ const PortfolioHero = () => {
     }
 
 
+    const downloadPDF = async (url: any) => {
+        try {
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch PDF');
+            }
+
+            const blob = await response.blob();
+
+            // Extract the filename from the URL
+            const filename = url.split('/').pop() || 'Israel_CV.pdf';
+
+            const downloadUrl = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+
+            // Use the extracted filename for the download
+            link.download = filename;
+
+            document.body.appendChild(link);
+            link.click();
+
+            window.URL.revokeObjectURL(downloadUrl);
+            document.body.removeChild(link);
+        } catch (error) {
+            console.error('Error downloading PDF:', error);
+        }
+    };
+
+    const handleDownload = () => {
+        const pdfUrl = '/Israel_CV.pdf'; // Replace with your PDF's URL
+        downloadPDF(pdfUrl);
+    };
 
 
 
@@ -40,11 +78,11 @@ const PortfolioHero = () => {
 
 
                 <div className="flex justify-center gap-4">
-                    <Button className="text-black dark:text-teal-600 font-semibold p-4  hover:dark:text-red-600 hover:text-teal-600" >
+                    <Button className="text-black dark:text-teal-600 font-semibold p-4  hover:dark:text-red-600 hover:text-teal-600" click={handleDownload} >
                         Download CV
                     </Button>
 
-                    <Button className="text-black dark:text-teal-600 font-semibold p-4  hover:dark:text-red-600 hover:text-teal-600" >
+                    <Button className="text-black dark:text-teal-600 font-semibold p-4  hover:dark:text-red-600 hover:text-teal-600" click={contactHandle}>
                         Contact Me
                     </Button>
                 </div>

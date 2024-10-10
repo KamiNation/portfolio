@@ -8,7 +8,7 @@ import React from 'react'
 const PortfolioAboutCard: React.FC<aboutmap> = ({ year, skill, desc, icon }) => {
     return (
 
-        <div className="p-6 flex-1 rounded-[2rem] border border-solid text-center dark:border-red-600 border-teal-600  text-black dark:text-teal-600">
+        <div className="p-6 flex-1 rounded-[2rem] border border-solid text-center dark:border-green-600 border-teal-600  text-black dark:text-teal-600">
             <div className='flex items-center justify-center'>
                 {
                     icon

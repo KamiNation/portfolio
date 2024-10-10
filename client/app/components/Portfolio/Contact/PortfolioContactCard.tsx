@@ -23,14 +23,14 @@ const PortfolioContactCard: React.FC<contactmap> = ({ icon, desc, id }) => {
 
 
     return (
-        <Button click={() => setSocialId(id)} className="flex items-center justify-center gap-2 m-4  hover:dark:text-red-600 hover:text-teal-600">
+        <div onClick={() => setSocialId(id)} className="flex items-center justify-center gap-2 m-4  hover:dark:text-green-600 hover:text-teal-600">
             <div>
                 {icon}
             </div>
             <Button
                 click={() => socialHandle()}
             >{desc}</Button>
-        </Button>
+        </div>
     )
 }
 

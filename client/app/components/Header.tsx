@@ -52,7 +52,7 @@ const Header = () => {
 
     return (
         <div className="w-full relative">
-            <div className={`${active ? "dark:bg-opacity-50 dark:bg-gradient-to-b dark:from-black dark:to-black fixed top-0 left-0 w-full h-[80px] z-[80] border-b dark:border-[#ffffff1c] shadow-xl transition duration-500 bg-blue-900" : "  w-full border-b dark:border-[#ffffff1c] h-[80px] z-[80] dark:shadow"} border-b-teal-600 dark:border-b-red-600`}>
+            <div className={`${active ? "dark:bg-opacity-50 dark:bg-gradient-to-b dark:from-black dark:to-black fixed top-0 left-0 w-full h-[80px] z-[80] border-b dark:border-[#ffffff1c] shadow-xl transition duration-500 bg-blue-900" : "  w-full border-b dark:border-[#ffffff1c] h-[80px] z-[80] dark:shadow"} border-b-teal-600 dark:border-b-green-600`}>
                 {/* Header container with conditional classes for sticky effect */}
 
                 <div className="w-[95%] 800px:w-[92%] m-auto py-2 h-full">

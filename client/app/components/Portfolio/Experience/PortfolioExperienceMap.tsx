@@ -6,7 +6,7 @@ const PortfolioExperienceMap = () => {
     return (
         <>
 
-            <div className='p-6 flex-1 rounded-[2rem] text-center text-black dark:text-teal-600 border border-solid  dark:border-red-600 border-teal-600'>
+            <div className='p-6 flex-1 rounded-[2rem] text-center text-black dark:text-teal-600 border border-solid  dark:border-green-600 border-teal-600'>
                 <h2 className='font-semibold text-[1.75rem] mb-8 text-black dark:text-teal-600 '>Software Development</h2>
 
                 <div className='flex flex-wrap justify-around gap-10'>
@@ -25,7 +25,7 @@ const PortfolioExperienceMap = () => {
             </div>
 
 
-            <div className='p-6 flex-1 rounded-[2rem] text-center text-black dark:text-teal-600 border border-solid   dark:border-red-600 border-teal-600'>
+            <div className='p-6 flex-1 rounded-[2rem] text-center text-black dark:text-teal-600 border border-solid   dark:border-green-600 border-teal-600'>
                 <h2 className='font-semibold text-[1.75rem] mb-8 text-black dark:text-teal-600 '>Technical Writing</h2>
 
                 <div className='flex flex-wrap justify-around gap-10'>
