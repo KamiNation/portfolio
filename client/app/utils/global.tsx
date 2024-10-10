@@ -45,7 +45,7 @@ export const portfolioExperienceSW: experiencemap[] = [
     },
     {
         icon: <BiRotateRight />,
-        skill: "CSS",
+        skill:"HTML",
         rank: "Intermediate",
     },
     {
@@ -162,22 +162,43 @@ export const portfolioProjectMap: projectmap[] = [
         project_name: "Expense Tracker",
         github: "https://github.com/KamiNation/ExpenseTrackerTypescript-Tailwind",
         live_demo: "https://expense-tracker-typescript-tailwind.vercel.app/",
-        technology: "html css react typescript tailwind vite",
+        technology: " react typescript tailwind vite",
         image: "/tracker.png"
     },
     {
         project_name: "Joke API + Swagger_Docs",
         github: "https://github.com/KamiNation/JokeAPI-UI-SwaggerDocs",
-        live_demo: "Link not available",
-        technology: "html css swagger express node tailwind",
-        image: "/joke+swagger.gif"
+        live_demo: "",
+        technology: " swagger express node tailwind nodemon morgan",
+        image: "/jokeSwagger.gif"
     },
     {
         project_name: "Mayport",
         github: "https://github.com/KamiNation/Mayport",
         live_demo: "mayportdemo.vercel.app",
-        technology: "html css tailwind react  vite",
+        technology: " tailwind react  vite",
         image: "/mayport.png"
+    },
+    {
+        project_name: "Portfolio",
+        github: "https://github.com/KamiNation/portfolio",
+        live_demo: "https://kamiportfolio.vercel.app/",
+        technology: " tailwind react typescript nextjs",
+        image: "/portfolio.png"
+    },
+    {
+        project_name: "JokeAPI+UI+Swagger",
+        github: "https://github.com/KamiNation/JokeAPI-UI-SwaggerDocs",
+        live_demo: "",
+        technology: " swagger express node tailwind ejs morgan nodemon",
+        image: "/jokeUI.gif"
+    },
+    {
+        project_name: "KOSY African kitchen",
+        github: "",
+        live_demo: "https://kosyafricankitchen.vercel.app/",
+        technology: "nextjs tailwind react",
+        image: "/kosy.png"
     },
 ]
 

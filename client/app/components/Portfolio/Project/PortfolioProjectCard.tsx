@@ -6,11 +6,24 @@ import { projectmap } from '@/app/utils/global'
 const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, image, github, live_demo, technology, id }) => {
 
     const gitHandle = () => {
-        window.open(`${github}`, '_blank');
+        const button = document.getElementById("gitdemo") as HTMLButtonElement
+
+        if (github === "") {
+            button.disabled
+        } else {
+            window.open(`${github}`, '_blank');
+        }
+
     }
 
     const liveDemoHandle = () => {
-        window.open(`${live_demo}`, '_blank');
+        const button = document.getElementById("livedemo") as HTMLButtonElement
+
+        if (live_demo === "") {
+            button.disabled
+        } else {
+            window.open(`${live_demo}`, '_blank'); // Open the URL in a new tab
+        }
     }
 
 
@@ -24,13 +37,13 @@ const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, image, githu
 
             <h2 className="font-semibold text-[1.75rem] mb-8 m-[1px]" >{project_name}</h2>
             <div className="flex justify-center gap-4">
-                <Button className="font-semibold p-4 w-32 rounded-[2rem]"
-                click={gitHandle}
+                <Button id='gitdemo' className="font-semibold p-4 w-32 rounded-[2rem] hover:bg-white"
+                    click={gitHandle}
                 >
                     Github
                 </Button>
-                <Button className="font-semibold p-4 w-32 rounded-[2rem]"
-                click={liveDemoHandle} 
+                <Button id="livedemo" className={`font-semibold p-4 w-32 rounded-[2rem] hover:bg-white`}
+                    click={liveDemoHandle}
                 >
                     Live Demo
                 </Button>
