@@ -1,4 +1,4 @@
-import { ImageProps } from "next/image";
+import { ImageLoader, ImageProps } from "next/image";
 import { ReactElement } from "react";
 import { BiLogoGithub, BiLogoLinkedin, BiLogoTwitter, BiRotateRight } from "react-icons/bi";
 import { HiMail } from "react-icons/hi";
@@ -149,7 +149,7 @@ export const portfolioExperienceTW: experiencemap[] = [
 
 export interface projectmap {
     id?: number
-    image?: ImageProps
+    image?: string
     project_name?: string
     github?: string
     live_demo?: string
@@ -159,10 +159,11 @@ export interface projectmap {
 
 export const portfolioProjectMap: projectmap[] = [
     {
-        project_name: "Simple Card",
-        github: "Link not available",
-        live_demo: "Link not available",
-        technology: "html css"
+        project_name: "Expense Tracker",
+        github: "https://github.com/KamiNation/ExpenseTrackerTypescript-Tailwind",
+        live_demo: "https://expense-tracker-typescript-tailwind.vercel.app/",
+        technology: "html css react typescript tailwind",
+        image: "/tracker.png"
     },
     {
         project_name: "Food Page",

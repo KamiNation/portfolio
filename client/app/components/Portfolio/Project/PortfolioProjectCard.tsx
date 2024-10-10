@@ -3,7 +3,7 @@ import React from 'react'
 import Button from '../../btnComponent/Button'
 import { projectmap } from '@/app/utils/global'
 
-const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, github, live_demo, technology, id }) => {
+const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, image, github, live_demo, technology, id }) => {
 
     
 
@@ -12,9 +12,9 @@ const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, github, live
 
         <div className="p-6 flex-1 rounded-[2rem] text-center color-container border border-solid  dark:border-red-600 border-teal-600" >
 
-            {/* <div className="flex flex-wrap flex-row gap-10 justify-around" >
-                <Image src={""} alt="Project 1" className="rounded-[2rem] w-[90%] h-[90%]" />
-            </div> */}
+            <div className="flex flex-wrap flex-row gap-10 justify-around" >
+                <Image src={"image"} alt="Project 1" width={150} height={150} className="rounded-[2rem] w-[90%] h-[90%]" />
+            </div>
 
             <h2 className="font-semibold text-[1.75rem] mb-8 m-[1px]" >{project_name}</h2>
             <div className="flex justify-center gap-4">
