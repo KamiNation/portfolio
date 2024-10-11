@@ -58,9 +58,9 @@ const PortfolioHero = () => {
 
 
     return (
-        <section id='portfolio' className='w-full min-h-screen flex  gap-40 mt-4 items-center justify-center text-black dark:text-teal-600 relative'>
+        <section id='portfolio' className='w-full min-h-screen flex  gap-40 mt-4 items-center justify-center text-black dark:text-teal-600 relative '>
 
-            <div className='max-w-[400px] max-h-[400px] flex items-center justify-center sm:hidden'>
+            <div className='max-w-[400px] max-h-[400px] flex items-center justify-center sm:hidden md:hidden lg:hidden xl:hidden'>
                 <Image src={"/kami.jpg"} alt='Israel' width={400} height={400} className='rounded-[50%] min-w-[400px] min-h-[400px]' />
             </div>
 

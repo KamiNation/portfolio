@@ -22,7 +22,7 @@ const PortfolioAbout = () => {
             <div className="gap-40 flex  items-center justify-center mt-4">
 
 
-                <div className="flex max-w-[400px] max-h-[400px] items-center justify-center sm:hidden">
+                <div className="flex max-w-[400px] max-h-[400px] items-center justify-center sm:hidden md:hidden lg:hidden xl:hidden">
 
                     <Image src={"/about-me.jpeg"} alt='about-me' width={400} height={400} className=' rounded-[2rem]  min-w-[400px] min-h-[400px]' />
 
@@ -35,7 +35,7 @@ const PortfolioAbout = () => {
                     <PortfolioMap />
 
 
-                    <div className="text-justify sm:text-xs">
+                    <div className="text-justify sm:text-xs p-2.5">
                         <p>
                             Proficient in clear communication,
                             analytical thinking, and technical

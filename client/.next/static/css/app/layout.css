@@ -1109,6 +1109,14 @@ body {
   .md\:hidden {
     display: none;
   }
+
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap;
+  }
 }
 
 @media (min-width: 651px) and (max-width: 768px) {
@@ -1130,6 +1138,10 @@ body {
 
   .xl\:w-\[92\%\] {
     width: 92%;
+  }
+
+  .xl\:flex-col {
+    flex-direction: column;
   }
 }
 

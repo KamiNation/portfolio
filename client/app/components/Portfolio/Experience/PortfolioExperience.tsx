@@ -11,7 +11,7 @@ const PortfolioExperience = () => {
             <p className="text-center">Explore My</p>
             <h1 className="text-5xl text-center">Experience</h1>
             <div className="justify-center flex ">
-                <div className='gap-10 mb-8 mt-8 flex sm:flex-col'>
+                <div className='gap-10 mb-8 mt-8 flex sm:flex-col md:flex-col'>
                     <PortfolioExperienceMap />
                 </div>
             </div>
