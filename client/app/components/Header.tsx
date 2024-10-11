@@ -61,13 +61,13 @@ const Header = () => {
 
                         <div>
                             <Link href={"/"} // Logo link
-                                className={"text-[25px] font-Poppins font-[500] sm:hidden md:hidden lg:hidden  text-black dark:text-teal-600 "}
+                                className={"text-[25px] font-Poppins font-[500] sm:hidden md:hidden lg:hidden xl:hidden  text-black dark:text-teal-600 "}
                             >
-                                Israel Adedamola | KAMI
+                                Israel Adedamola 
                             </Link>
 
                             <Link href={"/"} // Logo link
-                                className={"text-[25px] font-Poppins font-[500]  text-black dark:text-teal-600 2xl:hidden xl:hidden lg:hidden"}
+                                className={"text-[25px] font-Poppins font-[500]  text-black dark:text-teal-600 2xl:hidden  "}
                             >
                                 KAMI
                             </Link>

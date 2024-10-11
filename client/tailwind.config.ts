@@ -28,7 +28,7 @@ const config: Config = {
 				'lg': { 'min': '651px', 'max': '768px' },
 				// => @media (min-width: 1024px and max-width: 1279px) { ... }
 
-				'xl': { 'min': '768px', 'max': '1024px' },
+				'xl': { 'min': '769px', 'max': '1023px' },
 				// => @media (min-width: 1280px and max-width: 1535px) { ... }
 
 				'2xl': { 'min': '1024px' },
