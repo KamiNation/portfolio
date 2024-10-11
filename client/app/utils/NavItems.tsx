@@ -52,7 +52,7 @@ const NavItems: React.FC<Props> = ({ isMobile }) => {
 
     return (
         <>
-            <div className='hidden 800px:flex'>
+            <div className='hidden xl:flex'>
 
                 {
                     navItemsData && navItemsData.map((navElement, index) => (
@@ -75,33 +75,19 @@ const NavItems: React.FC<Props> = ({ isMobile }) => {
 
             {
                 isMobile && (
-                    <div className='800px:hidden mt-5 border border-solid border-red-800'>
-                        {/* add logo */}
-
-                        <div className='w-full text-center py-6'>
-                            <Link href={"/"} passHref>
-                                <span className={`text-[25px] font-Poppins font-[500] text-black dark:text-white`}>
-                                    KaMi
-                                </span>
-                            </Link>
-                        </div>
-
-                        <div className='flex-col items-center justify-center'>
-                            {
-                                navItemsData && navItemsData.map((navElement, index) => (
-                                    <Link href={`${navElement.url}`} key={index} passHref>
-                                        <span
-                                            className={
-                                                `${active === navElement.url ?
-                                                    "dark:text-[green] text-green-600" : "dark:text-teal-600 text-black"} text-[18px] px-4 font-Poppins font-[400] 
-                            `}>
+                    <div className='xl:hidden 2xl:hidden mt-5 flex flex-col  justify-center items-center bg-red-700'>
+                        {
+                            navItemsData && navItemsData.map((navElement, index) => (
+                                <Link href={`${navElement.url}`} key={index} passHref>
+                                    <span
+                                        className={
+                                            `${active === navElement.url ?
+                                            `text-secondary` : "text-white"} text-[18px] text-white px-4 font-Poppins font-[400] sm:hover:text-primary`}>
                                             {navElement.name}
-                                        </span>
-                                    </Link>
-                                ))
-                            }
-                        </div>
-
+                                    </span>
+                                </Link>
+                            ))
+                        }
                     </div>
                 )
             }

@@ -55,15 +55,21 @@ const Header = () => {
             <div className={`${active ? "dark:bg-opacity-50 dark:bg-gradient-to-b dark:from-black dark:to-black fixed top-0 left-0 w-full h-[80px] z-[80] border-b dark:border-[#ffffff1c] shadow-xl transition duration-500 bg-blue-900" : "  w-full border-b dark:border-[#ffffff1c] h-[80px] z-[80] dark:shadow"} border-b-teal-600 dark:border-b-green-600`}>
                 {/* Header container with conditional classes for sticky effect */}
 
-                <div className="w-[95%] 800px:w-[92%] m-auto py-2 h-full">
+                <div className="w-[95%] xl:w-[92%] m-auto py-2 h-full">
                     <div className="w-full h-[80px] flex items-center justify-between p-3" >
                         {/* Flex container for logo and navigation items */}
 
                         <div>
                             <Link href={"/"} // Logo link
-                                className={"text-[25px] font-Poppins font-[500]  text-black dark:text-teal-600 "}
+                                className={"text-[25px] font-Poppins font-[500] sm:hidden md:hidden lg:hidden  text-black dark:text-teal-600 "}
                             >
                                 Israel Adedamola | KAMI
+                            </Link>
+
+                            <Link href={"/"} // Logo link
+                                className={"text-[25px] font-Poppins font-[500]  text-black dark:text-teal-600 2xl:hidden xl:hidden lg:hidden"}
+                            >
+                                KAMI
                             </Link>
                         </div>
 
@@ -75,7 +81,7 @@ const Header = () => {
                             <ThemeSwitcher /> {/* Theme switcher button */}
 
                             {/* Mobile menu icon, only visible on smaller screens */}
-                            <div className="800px:hidden">
+                            <div className="xl:hidden">
                                 <HiOutlineMenuAlt3
                                     size={25}
                                     className="cursor-pointer dark:text-white text-black"
@@ -92,26 +98,15 @@ const Header = () => {
                 {/* Mobile sidebar */}
                 {
                     openSidebar && (
-                        <div className="fixed w-full h-screen top-0 left-0 z-[99999] dark:bg-[unset] bg-[#00000024]"
+                        <div className="fixed w-full h-screen top-0 left-0 z-[99999]"
                             onClick={handleClose} // Handle close on click outside
                             id="screen"
                         >
-                            <div className="w-[70%] fixed z-[999999999] h-screen bg-white dark:bg-black dark:bg-opacity-90  dark:bg-blur-lg top-0 right-0">
+                            <div className="w-[70%] fixed z-[999999999] h-full sm:flex sm:justify-between sm:flex-col   top-0 right-0">
+
                                 <NavItems isMobile={true} /> {/* Mobile navigation items */}
-
-                                {/* User icon for login on mobile */}
-                                <HiOutlineUserCircle
-                                    size={25}
-                                    className="cursor-pointer ml-5 my-2 text-black dark:text-white"
-                                    onClick={() => setOpen(true)} // Opens login modal on click
-                                />
-
-                                <br />
-                                <br />
-
-                                {/* Footer text inside sidebar */}
-                                <p className="text-[16px] px-2 pl-5 text-black dark:text-white">
-                                    Copyright 2024 KLearning
+                                <p className="text-[16px] px-2 pl-5 text-black dark:text-teal-600">
+                                    Israel Adedamola
                                 </p>
                             </div>
                         </div>

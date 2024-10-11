@@ -10,7 +10,7 @@ const PortfolioProject = () => {
 
 
     return (
-        <section id='project' className='w-full min-h-screen mt-4 text-black dark:text-teal-600 relative '>
+        <section id='project' className='w-full min-h-screen mt-4 text-black dark:text-teal-600 relative p-2.5'>
 
 
             <p className="text-center">Browse My Recent</p>
@@ -26,10 +26,6 @@ const PortfolioProject = () => {
 
                 </div>
             </div>
-
-            <BiSolidArrowFromTop className="absolute -right-5 bottom-10 pointer h-8" onClick={() => arrowClickHandle()} />
-
-
         </section>
     )
 }

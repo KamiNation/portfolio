@@ -17,9 +17,7 @@ const PortfolioHero = () => {
         location.href = '#contact'
     }
 
-    const arrowClickHandle = () => {
-        location.href = '#about-me'
-    }
+  
 
 
     const downloadPDF = async (url: any) => {
@@ -62,7 +60,7 @@ const PortfolioHero = () => {
     return (
         <section id='portfolio' className='w-full min-h-screen flex  gap-40 mt-4 items-center justify-center text-black dark:text-teal-600 relative'>
 
-            <div className='max-w-[400px] max-h-[400px] flex items-center justify-center'>
+            <div className='max-w-[400px] max-h-[400px] flex items-center justify-center sm:hidden'>
                 <Image src={"/kami.jpg"} alt='Israel' width={400} height={400} className='rounded-[50%] min-w-[400px] min-h-[400px]' />
             </div>
 
@@ -92,8 +90,6 @@ const PortfolioHero = () => {
                     <BiLogoGithub className='pointer h-8 hover:dark:text-red-600 hover:text-teal-600' onClick={() => gitClickHandle()} />
                 </div>
             </div>
-
-            <BiSolidArrowFromTop className="absolute -right-5 bottom-10 pointer h-8" onClick={() => arrowClickHandle()} />
 
         </section>
     )

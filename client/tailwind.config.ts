@@ -19,15 +19,21 @@ const config: Config = {
         Josefin: ["var(--font-Josefin)"],
       },
       screens: {
-        "1000px": "1000px",
-        "1100px": "1100px",
-        "1200px": "1200px",
-        "1300px": "1300px",
-        "1500px": "1500px",
-        "800px": "800px",
-        "400px": "400px",
+				'sm': { 'min': '320px', 'max': '480px' },
+				// => @media (min-width: 640px and max-width: 767px) { ... }
 
-      }
+				'md': { 'min': '481px', 'max': '650px' },
+				// => @media (min-width: 768px and max-width: 1023px) { ... }
+
+				'lg': { 'min': '651px', 'max': '768px' },
+				// => @media (min-width: 1024px and max-width: 1279px) { ... }
+
+				'xl': { 'min': '768px', 'max': '1024px' },
+				// => @media (min-width: 1280px and max-width: 1535px) { ... }
+
+				'2xl': { 'min': '1024px' },
+				// => @media (min-width: 1536px) { ... }
+			},
     },
   },
   plugins: [],

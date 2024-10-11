@@ -6,7 +6,7 @@ import PortfolioAboutCard from './PortfolioAboutCard'
 
 const PortfolioMap = () => {
     return (
-        <div className='gap-8 mx-8 my-8 flex'>
+        <div className='gap-8 mx-8 my-8 flex sm:flex-col'>
 
 
 

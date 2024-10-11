@@ -22,20 +22,20 @@ const PortfolioAbout = () => {
             <div className="gap-40 flex  items-center justify-center mt-4">
 
 
-                <div className="flex max-w-[400px] max-h-[400px] items-center justify-center">
+                <div className="flex max-w-[400px] max-h-[400px] items-center justify-center sm:hidden">
 
                     <Image src={"/about-me.jpeg"} alt='about-me' width={400} height={400} className=' rounded-[2rem]  min-w-[400px] min-h-[400px]' />
 
                 </div>
 
 
-                <div className="justify-center flex-col">
+                <div className="justify-center flex-col ">
 
 
                     <PortfolioMap />
 
 
-                    <div className="text-justify">
+                    <div className="text-justify sm:text-xs">
                         <p>
                             Proficient in clear communication,
                             analytical thinking, and technical
@@ -52,9 +52,6 @@ const PortfolioAbout = () => {
                 </div>
 
             </div>
-
-            <BiSolidArrowFromTop className="absolute -right-5 bottom-10 pointer h-8" onClick={() => arrowClickHandle()} />
-
         </section>
 
     )

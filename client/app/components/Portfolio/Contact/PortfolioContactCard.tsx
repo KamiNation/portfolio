@@ -9,14 +9,16 @@ const PortfolioContactCard: React.FC<contactmap> = ({ icon, desc, id }) => {
 
     const socialHandle = () => {
         if (socialId === 0) {
-            location.href = "mailto:adedamolacopy@gmail.com"
+            window.open("mailto:adedamolacopy@gmail.com", "_blank")
         } else if (socialId === 1) {
-            location.href = 'https://www.linkedin.com/in/israel-adedamola-606373139/'
+            window.open('https://www.linkedin.com/in/israel-adedamola-606373139/', "_blank")
         } else if (socialId === 2) {
-            location.href = 'https://github.com/KamiNation'
+            window.open('https://github.com/KamiNation', "_blank")
         } else if (socialId === 3) {
-            location.href = 'https://www.x.com/kamii_ai'
-        }else {
+            window.open('https://www.x.com/kamii_ai', "_blank")
+        } else if (socialId === 4) {
+            window.open('https://kamii.hashnode.dev/', "_blank")
+        } else {
             alert("Link Broken. It will be fixed ASAP")
         }
     }

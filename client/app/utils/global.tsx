@@ -1,6 +1,7 @@
 import { ImageLoader, ImageProps, StaticImageData } from "next/image";
 import { ReactElement } from "react";
 import { BiLogoGithub, BiLogoLinkedin, BiLogoTwitter, BiRotateRight } from "react-icons/bi";
+import { FaHashnode } from "react-icons/fa6";
 import { HiMail } from "react-icons/hi";
 
 export interface aboutmap {
@@ -200,6 +201,13 @@ export const portfolioProjectMap: projectmap[] = [
         technology: "nextjs tailwind react",
         image: "/kosy.png"
     },
+    {
+        project_name: "Travel Advisor",
+        github: "https://github.com/KamiNation/travel-advisory",
+        live_demo: "https://travel-advisory-zeta.vercel.app/",
+        technology: "react pwa css vite",
+        image: "/traveladvisor.png"
+    },
 ]
 
 
@@ -227,5 +235,9 @@ export const portfolioContactMap: contactmap[] = [
     {
         icon: <BiLogoTwitter />,
         desc: "Twitter",
+    },
+    {
+        icon: <FaHashnode />,
+        desc: "Hashnode",
     },
 ]

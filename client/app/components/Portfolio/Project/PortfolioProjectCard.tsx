@@ -29,13 +29,13 @@ const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, image, githu
 
     return (
 
-        <div className="p-6 flex-1 rounded-[2rem] text-center color-container border border-solid  dark:border-green-600 border-teal-600" >
+        <div className="p-6 flex-1 rounded-[2rem] text-center color-container border border-solid  dark:border-green-600 border-teal-600 sm:p-2" >
 
-            <div className="flex flex-wrap flex-row gap-10 justify-around" >
-                <Image src={image} alt="Project 1" width={150} height={150} className="rounded-[2rem] w-[90%] h-[90%]" />
+            <div className="flex flex-wrap flex-row gap-10 justify-around mt-4" >
+                <Image src={image} alt="Project 1" width={150} height={150} className="rounded-[2rem] w-[90%] h-[90%] " />
             </div>
 
-            <h2 className="font-semibold text-[1.75rem] mb-8 m-[1px]" >{project_name}</h2>
+            <h2 className="font-semibold text-[1.75rem] mb-8 mt-4 m-[1px] sm:text-[0.95rem]" >{project_name}</h2>
             <div className="flex justify-center gap-4">
                 <Button id='gitdemo' className="font-semibold p-4 w-32 rounded-[2rem] hover:bg-white"
                     click={gitHandle}
