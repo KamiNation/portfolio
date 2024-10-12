@@ -46,7 +46,7 @@ export const portfolioExperienceSW: experiencemap[] = [
     },
     {
         icon: <BiRotateRight />,
-        skill:"HTML",
+        skill:"CSS",
         rank: "Intermediate",
     },
     {
@@ -99,6 +99,11 @@ export const portfolioExperienceSW: experiencemap[] = [
         skill: "React Native",
         rank: "Intermediate",
     },
+    {
+        icon: <BiRotateRight />,
+        skill: "Redux",
+        rank: "Intermediate",
+    },
 ]
 
 
@@ -142,6 +147,11 @@ export const portfolioExperienceTW: experiencemap[] = [
     {
         icon: <BiRotateRight />,
         skill: "Markdown",
+        rank: "Intermediate",
+    },
+    {
+        icon: <BiRotateRight />,
+        skill: "Gitbook",
         rank: "Intermediate",
     },
 ]
