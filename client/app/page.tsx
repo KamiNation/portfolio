@@ -4,11 +4,11 @@
 
 import React, { useState } from 'react'
 
-import Heading from './utils/Heading'
+import Heading from './components/Heading'
 
 
-import Header from './components/Header'
-import Portfolio from './components/Portfolio/Portfolio'
+import Header from './screens/Header'
+import Portfolio from './screens/Portfolio/Portfolio'
 
 
 

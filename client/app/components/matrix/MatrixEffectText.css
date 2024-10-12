@@ -1,0 +1,30 @@
+.matrix-effect {
+    font-family: monospace;
+    color: #0f0;
+    /* Matrix green */
+    display: inline-block;
+    white-space: nowrap;
+    /* Prevent line breaks */
+}
+
+.matrix-char {
+    display: inline-block;
+    opacity: 0;
+    /* Initially hidden */
+    animation: fadeIn 0.5s forwards;
+    /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+        /* Move slightly from above */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Final position */
+    }
+}
