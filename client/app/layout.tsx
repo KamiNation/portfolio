@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className="bg-white bg-no-repeat dark:bg-gradient-to-b dark:from-black dark:to-black duration-300 " >
+      <body className="bg-white bg-no-repeat dark:bg-black duration-300 " >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 
 
