@@ -1,14 +1,18 @@
 import Image from 'next/image'
-import React from 'react'
+import React, {useState} from 'react'
 import Button from '../../../components/Button'
 import { projectmap } from '@/app/utils/global'
 
+
 const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, image, github, live_demo, technology, id }) => {
 
+    const [checkLive, setCheckLive] = useState(false);
+    
     const gitHandle = () => {
         const button = document.getElementById("gitdemo") as HTMLButtonElement
 
         if (github === "") {
+            setCheckLive(true);
             button.disabled
         } else {
             window.open(`${github}`, '_blank');
@@ -45,7 +49,9 @@ const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, image, githu
                 <Button id="livedemo" className={`font-semibold p-4 w-32 rounded-[2rem] hover:bg-white`}
                     click={liveDemoHandle}
                 >
-                    Live Demo
+                    {
+                        checkLive ? (<p>Live project</p>) : (<p> Demo project </p>)
+                    }
                 </Button>
             </div>
             <div className="font-semibold p-4  rounded-[2rem] flex">Technology: <span className='ml-2'>{technology}</span></div>
