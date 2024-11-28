@@ -36,7 +36,7 @@ const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, image, githu
 
     return (
 
-        <div className="p-6 flex-1 rounded-[2rem] text-center color-container border border-solid  dark:border-green-600 border-teal-600 sm:p-2" >
+        <div className="p-6 flex-1 rounded-[2rem] text-center color-container border border-solid border-teal-600 dark:border-green-600 sm:p-2" >
 
             <div className="flex flex-wrap flex-row gap-10 justify-around mt-4" >
                 <Image src={image} alt="Project 1" width={150} height={150} className="rounded-[2rem] w-[90%] h-[90%] " />
