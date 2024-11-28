@@ -7,12 +7,15 @@ import { projectmap } from '@/app/utils/global'
 const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, image, github, live_demo, technology, id }) => {
 
     const [checkLive, setCheckLive] = useState(false);
+
+    if(github === "" || project_name === "Portfolio" ) {
+        setCheckLive(true);
+    }
     
     const gitHandle = () => {
         const button = document.getElementById("gitdemo") as HTMLButtonElement
 
         if (github === "") {
-            setCheckLive(true);
             button.disabled
         } else {
             window.open(`${github}`, '_blank');
@@ -50,7 +53,7 @@ const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, image, githu
                     click={liveDemoHandle}
                 >
                     {
-                        checkLive ? (<p>Live project</p>) : (<p> Demo project </p>)
+                        checkLive ? (Live project) : (Demo project)
                     }
                 </Button>
             </div>
