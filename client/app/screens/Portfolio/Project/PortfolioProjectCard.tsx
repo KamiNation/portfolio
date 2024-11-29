@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Button from '../../../components/Button'
 import { projectmap } from '@/app/utils/global'
 
@@ -8,10 +8,16 @@ const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, image, githu
 
     const [checkLive, setCheckLive] = useState(false);
 
-    if(github === "" || project_name === "Portfolio" ) {
-        setCheckLive(true);
-    }
+
+      // Use useEffect to handle conditional state updates
+      useEffect(() => {
+        if (github === "" || project_name === "Portfolio") {
+            setCheckLive(true);
+        }
+    }, [github, project_name]);
+
     
+
     const gitHandle = () => {
         const button = document.getElementById("gitdemo") as HTMLButtonElement
 
@@ -53,7 +59,7 @@ const PortfolioProjectCard: React.FC<projectmap> = ({ project_name, image, githu
                     click={liveDemoHandle}
                 >
                     {
-                        checkLive ? (Live project) : (Demo project)
+                        checkLive ? <>Live project</> : <>Demo project</>
                     }
                 </Button>
             </div>

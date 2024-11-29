@@ -4,6 +4,10 @@ import { BiLogoGithub, BiLogoLinkedin, BiLogoTwitter, BiRotateRight } from "reac
 import { FaHashnode } from "react-icons/fa6";
 import { HiMail } from "react-icons/hi";
 
+
+export interface contactMap {
+    whatsapp: boolean
+}
 export interface aboutmap {
     icon?: ReactElement<any>
     desc?: string
