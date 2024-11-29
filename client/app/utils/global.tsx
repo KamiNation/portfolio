@@ -6,7 +6,7 @@ import { HiMail } from "react-icons/hi";
 
 
 export interface contactMap {
-    whatsapp: boolean
+    whatsapp?: boolean
 }
 export interface aboutmap {
     icon?: ReactElement<any>
